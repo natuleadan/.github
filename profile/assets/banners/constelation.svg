@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 280" width="1400" height="280" role="img" aria-label="Natuleadan 7 Constellations">
+  <defs>
+    <radialGradient id="nebula" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b32323" stop-opacity="0.26"/>
+      <stop offset="55%" stop-color="#b32323" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#b32323" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coreglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d32f2f" stop-opacity="0.9"/>
+      <stop offset="45%" stop-color="#b32323" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#b32323" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .bg { fill: #272727; }
+      .nebula { fill: url(#nebula); }
+      .dust { fill: #b32323; }
+      .c-line { stroke: #b32323; stroke-width: 1.6; stroke-linecap: round; stroke-opacity: 0.84; fill: none; }
+      .c-subtle { stroke: #b32323; stroke-width: 1.1; stroke-linecap: round; stroke-opacity: 0.46; fill: none; }
+      .bridge { stroke: #b32323; stroke-width: 1; stroke-dasharray: 4, 7; stroke-opacity: 0.34; fill: none; }
+      .node-glow { fill: url(#coreglow); }
+      .node-core { fill: #d32f2f; }
+      .node-center { fill: #ffffff; }
+      @keyframes star-fade { 0%, 100% { opacity: 0.03; } 35%, 65% { opacity: 0.94; } }
+      @keyframes star-breathe { 0%, 100% { opacity: 0.32; transform: scale(0.86); } 50% { opacity: 1; transform: scale(1.16); } }
+      .fade-dot { animation: star-fade 4.4s ease-in-out infinite; }
+      .star-node { animation: star-breathe 4.0s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @media (prefers-reduced-motion: reduce) { .fade-dot, .star-node { animation: none !important; opacity: 0.85; } }
+    </style>
+  </defs>
+  <rect width="1400" height="280" rx="14" class="bg"/>
+  <circle cx="115" cy="140" r="115" class="nebula"/>
+  <circle cx="305" cy="140" r="115" class="nebula"/>
+  <circle cx="505" cy="140" r="115" class="nebula"/>
+  <circle cx="700" cy="140" r="115" class="nebula"/>
+  <circle cx="895" cy="140" r="115" class="nebula"/>
+  <circle cx="1095" cy="140" r="115" class="nebula"/>
+  <circle cx="1285" cy="140" r="115" class="nebula"/>
+  <g class="dust-field">
+    <circle cx="55" cy="36" r="1.2" class="dust fade-dot" style="animation-duration:4.1s; animation-delay:-0.5s;"/>
+    <circle cx="215" cy="238" r="1.4" class="dust fade-dot" style="animation-duration:5.2s; animation-delay:-2.1s;"/>
+    <circle cx="402" cy="42" r="1.1" class="dust fade-dot" style="animation-duration:3.8s; animation-delay:-1.4s;"/>
+    <circle cx="598" cy="244" r="1.3" class="dust fade-dot" style="animation-duration:4.9s; animation-delay:-3.0s;"/>
+    <circle cx="798" cy="38" r="1.2" class="dust fade-dot" style="animation-duration:5.5s; animation-delay:-0.8s;"/>
+    <circle cx="995" cy="236" r="1.5" class="dust fade-dot" style="animation-duration:4.3s; animation-delay:-2.6s;"/>
+    <circle cx="1192" cy="44" r="1.1" class="dust fade-dot" style="animation-duration:5.0s; animation-delay:-1.7s;"/>
+    <circle cx="1348" cy="228" r="1.3" class="dust fade-dot" style="animation-duration:3.9s; animation-delay:-0.4s;"/>
+    <circle cx="168" cy="68" r="1.0" class="dust fade-dot" style="animation-duration:4.6s; animation-delay:-2.3s;"/>
+    <circle cx="645" cy="52" r="1.2" class="dust fade-dot" style="animation-duration:4.8s; animation-delay:-1.1s;"/>
+    <circle cx="1045" cy="64" r="1.0" class="dust fade-dot" style="animation-duration:4.2s; animation-delay:-2.9s;"/>
+    <circle cx="35" cy="222" r="1.1" class="dust fade-dot" style="animation-duration:4.7s; animation-delay:-1.5s;"/>
+    <circle cx="485" cy="234" r="1.2" class="dust fade-dot" style="animation-duration:5.1s; animation-delay:-0.7s;"/>
+    <circle cx="1365" cy="52" r="1.1" class="dust fade-dot" style="animation-duration:4.4s; animation-delay:-2.2s;"/>
+  </g>
+  <path d="M148 138 L242 152 M368 112 L442 135 M565 135 L645 132 M752 142 L832 135 M958 135 L1038 140 M1158 140 L1238 132" class="bridge"/>
+  <!-- 1. Orion -->
+  <g class="c-orion">
+    <path d="M76 88 L112 72 L148 84 L132 136 L98 140 L76 88 M98 140 L86 196 L142 194 L132 136" class="c-line"/>
+    <path d="M100 140 L116 138 L132 136" class="c-line"/>
+    <g class="star-node" style="animation-delay:-0.3s;"><circle cx="76" cy="88" r="8" class="node-glow"/><circle cx="76" cy="88" r="3" class="node-core"/><circle cx="76" cy="88" r="1.3" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-1.4s;"><circle cx="148" cy="84" r="8" class="node-glow"/><circle cx="148" cy="84" r="2.8" class="node-core"/><circle cx="148" cy="84" r="1.2" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-2.1s;"><circle cx="116" cy="138" r="7" class="node-glow"/><circle cx="116" cy="138" r="2.5" class="node-core"/><circle cx="116" cy="138" r="1.1" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-0.9s;"><circle cx="86" cy="196" r="8" class="node-glow"/><circle cx="86" cy="196" r="3" class="node-core"/><circle cx="86" cy="196" r="1.3" class="node-center"/></g>
+  </g>
+  <!-- 2. Andromeda -->
+  <g class="c-andromeda">
+    <path d="M242 156 L282 138 L322 122 L366 108 M322 122 L322 96" class="c-line"/>
+    <g class="star-node" style="animation-delay:-0.6s;"><circle cx="242" cy="156" r="8" class="node-glow"/><circle cx="242" cy="156" r="2.9" class="node-core"/><circle cx="242" cy="156" r="1.3" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-1.8s;"><circle cx="322" cy="122" r="8" class="node-glow"/><circle cx="322" cy="122" r="2.9" class="node-core"/><circle cx="322" cy="122" r="1.3" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-2.6s;"><circle cx="366" cy="108" r="8" class="node-glow"/><circle cx="366" cy="108" r="2.8" class="node-core"/><circle cx="366" cy="108" r="1.2" class="node-center"/></g>
+  </g>
+  <!-- 3. Aurora -->
+  <g class="c-aurora">
+    <path d="M438 158 C465 92, 520 185, 568 102" class="c-subtle"/>
+    <path d="M446 136 L482 104 L512 142 L542 104 L568 136" class="c-line"/>
+    <g class="star-node" style="animation-delay:-0.5s;"><circle cx="482" cy="104" r="8" class="node-glow"/><circle cx="482" cy="104" r="2.8" class="node-core"/><circle cx="482" cy="104" r="1.2" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-1.5s;"><circle cx="512" cy="142" r="9" class="node-glow"/><circle cx="512" cy="142" r="3.2" class="node-core"/><circle cx="512" cy="142" r="1.4" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-2.4s;"><circle cx="542" cy="104" r="8" class="node-glow"/><circle cx="542" cy="104" r="2.8" class="node-core"/><circle cx="542" cy="104" r="1.2" class="node-center"/></g>
+  </g>
+  <!-- 4. Pleaides -->
+  <g class="c-pleaides">
+    <path d="M645 156 L675 138 L700 116 L732 106 L755 124 L728 144 L700 116" class="c-line"/>
+    <g class="star-node" style="animation-delay:-0.4s;"><circle cx="700" cy="116" r="9" class="node-glow"/><circle cx="700" cy="116" r="3.2" class="node-core"/><circle cx="700" cy="116" r="1.4" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-1.7s;"><circle cx="732" cy="106" r="7" class="node-glow"/><circle cx="732" cy="106" r="2.5" class="node-core"/><circle cx="732" cy="106" r="1.1" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-2.8s;"><circle cx="728" cy="144" r="7" class="node-glow"/><circle cx="728" cy="144" r="2.5" class="node-core"/><circle cx="728" cy="144" r="1.1" class="node-center"/></g>
+  </g>
+  <!-- 5. Pulsar -->
+  <g class="c-pulsar">
+    <line x1="836" y1="176" x2="956" y2="96" class="c-line"/>
+    <circle cx="896" cy="136" r="28" class="c-subtle"/>
+    <circle cx="896" cy="136" r="44" class="bridge"/>
+    <g class="star-node" style="animation-delay:-0.2s;"><circle cx="896" cy="136" r="14" class="node-glow"/><circle cx="896" cy="136" r="4.5" class="node-core"/><circle cx="896" cy="136" r="2" class="node-center"/></g>
+  </g>
+  <!-- 6. Caelum -->
+  <g class="c-caelum">
+    <path d="M1055 88 L1088 122 L1112 152 L1145 192" class="c-line"/>
+    <circle cx="1098" cy="140" r="26" class="c-subtle"/>
+    <g class="star-node" style="animation-delay:-0.8s;"><circle cx="1055" cy="88" r="8" class="node-glow"/><circle cx="1055" cy="88" r="2.8" class="node-core"/><circle cx="1055" cy="88" r="1.2" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-1.9s;"><circle cx="1088" cy="122" r="9" class="node-glow"/><circle cx="1088" cy="122" r="3.1" class="node-core"/><circle cx="1088" cy="122" r="1.4" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-2.7s;"><circle cx="1145" cy="192" r="8" class="node-glow"/><circle cx="1145" cy="192" r="2.8" class="node-core"/><circle cx="1145" cy="192" r="1.2" class="node-center"/></g>
+  </g>
+  <!-- 7. Lyra -->
+  <g class="c-lyra">
+    <path d="M1248 92 L1278 122 L1318 126 L1328 176 L1284 172 L1278 122" class="c-line"/>
+    <g class="star-node" style="animation-delay:-0.3s;"><circle cx="1248" cy="92" r="12" class="node-glow"/><circle cx="1248" cy="92" r="4.0" class="node-core"/><circle cx="1248" cy="92" r="1.8" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-1.6s;"><circle cx="1318" cy="126" r="7" class="node-glow"/><circle cx="1318" cy="126" r="2.5" class="node-core"/><circle cx="1318" cy="126" r="1.1" class="node-center"/></g>
+    <g class="star-node" style="animation-delay:-2.5s;"><circle cx="1328" cy="176" r="7" class="node-glow"/><circle cx="1328" cy="176" r="2.5" class="node-core"/><circle cx="1328" cy="176" r="1.1" class="node-center"/></g>
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260" role="img" aria-label="Orion Constellation">
+  <defs>
+    <radialGradient id="nebula" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b32323" stop-opacity="0.28"/>
+      <stop offset="55%" stop-color="#b32323" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#b32323" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coreglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d32f2f" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#b32323" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#b32323" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .bg { fill: #272727; }
+      .nebula { fill: url(#nebula); }
+      .dust { fill: #b32323; }
+      .c-line { stroke: #b32323; stroke-width: 1.6; stroke-linecap: round; stroke-opacity: 0.85; fill: none; }
+      .c-line-subtle { stroke: #b32323; stroke-width: 1.1; stroke-linecap: round; stroke-opacity: 0.48; fill: none; }
+      .node-glow { fill: url(#coreglow); }
+      .node-core { fill: #d32f2f; }
+      .node-center { fill: #ffffff; }
+      @keyframes star-fade {
+        0%, 100% { opacity: 0.03; }
+        35%, 65% { opacity: 0.94; }
+      }
+      @keyframes star-breathe {
+        0%, 100% { opacity: 0.25; transform: scale(0.88); }
+        50% { opacity: 1; transform: scale(1.12); }
+      }
+      .fade-dot { animation: star-fade 4.4s ease-in-out infinite; }
+      .star-node { animation: star-breathe 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @media (prefers-reduced-motion: reduce) {
+        .fade-dot, .star-node { animation: none !important; opacity: 0.8; }
+      }
+    </style>
+  </defs>
+  <rect width="1200" height="260" rx="14" class="bg"/>
+  <circle cx="600" cy="130" r="190" class="nebula"/>
+  <circle cx="560" cy="95" r="95" class="nebula"/>
+  <g class="dust-field">
+    <circle cx="95" cy="42" r="1.2" class="dust fade-dot" style="animation-duration:4.1s; animation-delay:-0.5s;"/>
+    <circle cx="165" cy="192" r="1.4" class="dust fade-dot" style="animation-duration:5.3s; animation-delay:-2.1s;"/>
+    <circle cx="240" cy="78" r="1.0" class="dust fade-dot" style="animation-duration:3.9s; animation-delay:-1.4s;"/>
+    <circle cx="310" cy="215" r="1.3" class="dust fade-dot" style="animation-duration:4.8s; animation-delay:-3.2s;"/>
+    <circle cx="385" cy="48" r="1.1" class="dust fade-dot" style="animation-duration:5.6s; animation-delay:-0.8s;"/>
+    <circle cx="815" cy="52" r="1.2" class="dust fade-dot" style="animation-duration:5.1s; animation-delay:-1.9s;"/>
+    <circle cx="885" cy="205" r="1.4" class="dust fade-dot" style="animation-duration:3.7s; animation-delay:-0.3s;"/>
+    <circle cx="955" cy="88" r="1.1" class="dust fade-dot" style="animation-duration:4.9s; animation-delay:-2.5s;"/>
+    <circle cx="1025" cy="175" r="1.5" class="dust fade-dot" style="animation-duration:5.4s; animation-delay:-1.1s;"/>
+    <circle cx="1095" cy="60" r="1.2" class="dust fade-dot" style="animation-duration:4.4s; animation-delay:-3.6s;"/>
+    <circle cx="135" cy="128" r="1.1" class="dust fade-dot" style="animation-duration:4.7s; animation-delay:-2.3s;"/>
+    <circle cx="285" cy="138" r="0.9" class="dust fade-dot" style="animation-duration:3.8s; animation-delay:-1.7s;"/>
+    <circle cx="915" cy="142" r="1.0" class="dust fade-dot" style="animation-duration:4.3s; animation-delay:-3.0s;"/>
+    <circle cx="1060" cy="122" r="1.3" class="dust fade-dot" style="animation-duration:5.2s; animation-delay:-0.6s;"/>
+  </g>
+  <g class="constellation-lines">
+    <path d="M520 64 L600 40 L680 66" class="c-line-subtle"/>
+    <path d="M520 64 L564 132 L680 66" class="c-line"/>
+    <path d="M680 66 L636 128 L520 64" class="c-line-subtle"/>
+    <path d="M564 132 L600 130 L636 128" class="c-line"/>
+    <path d="M564 132 L530 204 L600 130" class="c-line"/>
+    <path d="M636 128 L670 202 L680 66" class="c-line"/>
+    <path d="M530 204 L670 202" class="c-line-subtle"/>
+    <path d="M600 130 L602 162 L606 188" class="c-line-subtle"/>
+    <path d="M680 66 Q734 116 716 174" class="c-line-subtle"/>
+    <path d="M520 64 L478 34 L468 60" class="c-line-subtle"/>
+  </g>
+  <g class="constellation-nodes">
+    <g class="star-node" style="animation-duration:3.8s; animation-delay:-0.4s;">
+      <circle cx="520" cy="64" r="13" class="node-glow"/><circle cx="520" cy="64" r="4.5" class="node-core"/><circle cx="520" cy="64" r="2" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:4.6s; animation-delay:-1.5s;">
+      <circle cx="600" cy="40" r="10" class="node-glow"/><circle cx="600" cy="40" r="3.4" class="node-core"/><circle cx="600" cy="40" r="1.5" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:4.1s; animation-delay:-2.2s;">
+      <circle cx="680" cy="66" r="12" class="node-glow"/><circle cx="680" cy="66" r="4.2" class="node-core"/><circle cx="680" cy="66" r="1.8" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:3.6s; animation-delay:-0.9s;">
+      <circle cx="564" cy="132" r="11" class="node-glow"/><circle cx="564" cy="132" r="3.8" class="node-core"/><circle cx="564" cy="132" r="1.7" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:4.4s; animation-delay:-2.8s;">
+      <circle cx="600" cy="130" r="11" class="node-glow"/><circle cx="600" cy="130" r="3.8" class="node-core"/><circle cx="600" cy="130" r="1.7" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:3.9s; animation-delay:-1.2s;">
+      <circle cx="636" cy="128" r="11" class="node-glow"/><circle cx="636" cy="128" r="3.8" class="node-core"/><circle cx="636" cy="128" r="1.7" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:4.8s; animation-delay:-3.1s;">
+      <circle cx="530" cy="204" r="13" class="node-glow"/><circle cx="530" cy="204" r="4.5" class="node-core"/><circle cx="530" cy="204" r="2" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:4.3s; animation-delay:-0.7s;">
+      <circle cx="670" cy="202" r="12" class="node-glow"/><circle cx="670" cy="202" r="4.0" class="node-core"/><circle cx="670" cy="202" r="1.8" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:5.0s; animation-delay:-1.9s;">
+      <circle cx="602" cy="162" r="7" class="node-glow"/><circle cx="602" cy="162" r="2.5" class="node-core"/><circle cx="602" cy="162" r="1.1" class="node-center"/>
+    </g>
+    <g class="star-node" style="animation-duration:4.5s; animation-delay:-2.5s;">
+      <circle cx="716" cy="174" r="7" class="node-glow"/><circle cx="716" cy="174" r="2.4" class="node-core"/><circle cx="716" cy="174" r="1.1" class="node-center"/>
+    </g>
+  </g>
+</svg>
